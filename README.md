@@ -1,2 +1,2 @@
 # QAAUTO101
-Prometheus GL 'Python Auto' course
+Prometheus GL 'Python Automation' course
