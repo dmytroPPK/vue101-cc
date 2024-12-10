@@ -1,4 +1,12 @@
 import pytest
+from modules.api.clients.github import GitHub
+from dataclasses import dataclass
+
+
+@dataclass
+class TestUser:
+    owner: str = 'dmytroPPK'
+    repo: str = 'GL-QAAUTO101'
 
 
 class User:
@@ -24,3 +32,15 @@ def user():
     yield user
 
     user.remove()
+
+
+@pytest.fixture
+def github_api():
+    api = GitHub()
+    
+    yield api
+
+
+@pytest.fixture
+def test_user():
+    return TestUser()
