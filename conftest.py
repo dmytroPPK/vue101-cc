@@ -7,12 +7,13 @@ class Person:
         self.last_name = None
 
     def autofill_data(self):
-        self.first_name = 'John'
-        self.last_name = 'Baton'
+        self.first_name = "John"
+        self.last_name = "Baton"
 
     def clean_data(self):
-        self.first_name = ''
-        self.last_name = ''
+        self.first_name = ""
+        self.last_name = ""
+
 
 @pytest.fixture
 def get_person():
@@ -22,4 +23,3 @@ def get_person():
     yield person
 
     person.clean_data()
-
